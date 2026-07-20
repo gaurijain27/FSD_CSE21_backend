@@ -1,0 +1,9 @@
+day 1: 
+    git commands:
+        1. git status
+        2.git init
+        3.git add . (git remote add origin)
+        4.git commit -m "msg"
+        5.git branch -M main
+        6.git remote add origin ...
+        7.git push -u origin main
