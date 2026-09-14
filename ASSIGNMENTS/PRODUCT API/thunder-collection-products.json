@@ -1,0 +1,62 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Products API",
+  "dateExported": "2026-09-07T00:00:00.000Z",
+  "version": "1.2",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "products-list",
+      "colId": "products-api",
+      "name": "Get all products",
+      "url": "http://localhost:3000/api/products",
+      "method": "GET",
+      "headers": [],
+      "params": []
+    },
+    {
+      "_id": "products-get-one",
+      "colId": "products-api",
+      "name": "Get product by id",
+      "url": "http://localhost:3000/api/products/1",
+      "method": "GET",
+      "headers": [],
+      "params": []
+    },
+    {
+      "_id": "products-create",
+      "colId": "products-api",
+      "name": "Create product",
+      "url": "http://localhost:3000/api/products",
+      "method": "POST",
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"USB-C Cable\",\n  \"price\": 299,\n  \"category\": \"Electronics\",\n  \"stock\": 50\n}"
+      }
+    },
+    {
+      "_id": "products-update",
+      "colId": "products-api",
+      "name": "Update product",
+      "url": "http://localhost:3000/api/products/1",
+      "method": "PUT",
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Wireless Keyboard Pro\",\n  \"price\": 1799,\n  \"category\": \"Electronics\",\n  \"stock\": 20\n}"
+      }
+    },
+    {
+      "_id": "products-delete",
+      "colId": "products-api",
+      "name": "Delete product",
+      "url": "http://localhost:3000/api/products/2",
+      "method": "DELETE",
+      "headers": [],
+      "params": []
+    }
+  ]
+}

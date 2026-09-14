@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Keyboard",
+    "price": 1499,
+    "category": "Electronics",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "name": "Notebook",
+    "price": 99,
+    "category": "Stationery",
+    "stock": 100
+  }
+]

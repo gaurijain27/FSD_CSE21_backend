@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student Records</title>
+	<style>
+		:root { --ink: #222; --muted: #666; --paper: #f4f4f4; --panel: #fff; --accent: #2563eb; --line: #ccc; }
+		* { box-sizing: border-box; }
+		body { margin: 0; color: var(--ink); background: var(--paper); font: 16px Arial, sans-serif; }
+		.shell { width: min(900px, calc(100% - 32px)); margin: auto; padding: 32px 0; }
+		header { margin-bottom: 24px; }
+		.eyebrow { margin: 0 0 6px; color: var(--muted); font-size: 12px; text-transform: uppercase; }
+		h1 { margin: 0 0 12px; font-size: 32px; }
+		.intro, .note, .feature p { color: var(--muted); font-size: 14px; line-height: 1.5; }
+		.intro { margin: 0 0 12px; }
+		nav a { color: var(--accent); font-weight: bold; }
+		.layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+		.panel { padding: 24px; background: var(--panel); border: 1px solid var(--line); }
+		.panel h2 { margin: 0 0 20px; font-size: 22px; }
+		.field { margin-bottom: 16px; }
+		label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: bold; }
+		input, button { width: 100%; padding: 10px; font: inherit; }
+		input { border: 1px solid var(--line); }
+		button { margin-top: 4px; color: white; background: var(--accent); border: 0; cursor: pointer; }
+		.note { margin: 16px 0 0; }
+		.feature { background: var(--panel); }
+		.feature h2 { font-size: 22px; }
+		.mark { display: none; }
+		@media (max-width: 700px) { .layout { grid-template-columns: 1fr; } }
+	</style>
+</head>
+<body>
+	<main class="shell">
+		<header>
+			<div>
+				<p class="eyebrow">CSE · Student registry</p>
+				<h1>Make a record.</h1>
+			</div>
+			<div>
+				<p class="intro">A small, dependable home for the people in your class.</p>
+				<nav><a href="/students">View all students →</a></nav>
+			</div>
+		</header>
+
+		<section class="layout">
+			<form class="panel" action="/students" method="POST">
+				<h2>New student</h2>
+				<div class="field"><label for="name">Student name</label><input id="name" name="name" type="text" required></div>
+				<div class="field"><label for="rollNumber">Roll number</label><input id="rollNumber" name="rollNumber" type="text" required></div>
+				<div class="field"><label for="course">Course</label><input id="course" name="course" type="text" required></div>
+				<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+				<button type="submit">Add student</button>
+				<p class="note">Records are stored locally in <strong>students.json</strong>.</p>
+			</form>
+			<aside class="panel feature">
+				<div><p class="eyebrow">Welcome</p><h2>Keep the details that keep a class moving.</h2><p>Add a student here, then open the directory to see every saved record in one place.</p></div>
+				<span class="mark">01</span>
+			</aside>
+		</section>
+	</main>
+</body>
+</html>
